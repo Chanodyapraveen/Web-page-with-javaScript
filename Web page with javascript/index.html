@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px 0 ;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 600;
+            color: white;
+            opacity: 0;
+            transition: all.5s ease;
+        }
+    </style>
+</head>
+<body>
+   <!-- <a href="./about.html">About Us</a> 
+    <br>
+    <br> 
+<button id="back">back</button>
+<button id= "forward">forward</button>   
+<button id="click1">click</button> -->
+<div class="box">1</div>
+<div class="box">2</div>
+<div class="box">3</div>
+<div class="box">4</div>
+<div class="box">5</div>
+<div class="box">6</div>
+<div class="box">7</div>
+    <script>
+        let allbox=document.querySelectorAll(".box")
+        console.log(allbox);
+        
+        let boxSize=allbox.length;
+
+        let count=0;
+
+        let interval1 =setInterval(()=>{
+            allbox[count].style.opacity=1;
+            count++
+            if(count== boxSize){
+                clearInterval(interval1)
+            }
+        },1000)
+        // let count = 0;
+        // let interval = setInterval(()=>{
+        //     document.write(count);
+        //     count++;
+            
+        //     if(count == 10){
+        //         clearInterval(interval)
+        //     }
+        // }, 1000);
+         //for(let i=0;i<10; i++){
+           // setTimeout(()=>{
+             //    document.write(i+"<br>")   
+            //}, i * 1000);
+        //}
+        // let button=document.getElementById("click");
+        // button.addEventListener("click",function(){
+           // setTimeout(func1,3000);
+        //});
+        //function func1(){
+           // alert("hello")
+        //}
+       // for(let i=0;i<10; i++){
+            //setTimeout();
+       // }
+       // let back=document.getElementById("back");
+        //let forward= document.getElementById("forward")
+
+
+        // back.addEventListener("click",function(){
+           // window.history.back();
+        //})
+        //forward.addEventListener("click",function(){
+          //  window.history.forward();
+        //}) 
+    </script>
+</body>
+</html>
